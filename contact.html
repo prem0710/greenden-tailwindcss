@@ -14,7 +14,7 @@
         <h1 class="text-2xl">Greenden</h1>
 
         <!--Menu bar icon-->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 md:hidden">
             <path fill-rule="evenodd"
                 d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
                 clip-rule="evenodd" />
@@ -32,6 +32,22 @@
             </li>
         </ul>
     </nav>
+    <section id="sidebar" class="bg-green-300 fixed z-20 top-0 right-0 transition-all duration-1000" style="width: 50%; height:100vh; right:-50%;">
+        <div class="text-right p-5">
+            <p id="close-sidebar"class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col items-center gap-10 text-gray-700">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="products.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
 
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
@@ -61,6 +77,7 @@
         <p>At Greenden, we uphold the highest standards in plant quality and customer service</p>
         <p>@ 2024 Greenden</p>
     </section>
+    <script src="contact.js"></script>
 </body>
 
 </html>
