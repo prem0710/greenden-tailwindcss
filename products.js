@@ -20,15 +20,18 @@ var productlist = product.querySelectorAll("div")
 Search.addEventListener("keyup",function(event){
     var enteredvalue= event.target.value.toUpperCase()
 
-    for(var count=0; count < productlist.length; count=count+1)
-    {
-        var productname=productlist[count].querySelectorAll("h1").textcontent
+    for (var count = 0; count < productlist.length; count = count + 1) {
+        var productnameElement = productlist[count].querySelector("h3");
 
-        if(productname.toUpperCase().indexof(enteredvalue)<0)
-            {
-            productlist[count].style.display="none"
-        }else{
-            productlist[count].style.display="block"
+        // Check if the element with "h3" exists
+        if (productnameElement) {
+            var productname = productnameElement.textContent || ""; // Use textContent
+
+            if (productname.toUpperCase().indexOf(enteredvalue) < 0) {
+                productlist[count].style.display = "none";
+            } else {
+                productlist[count].style.display = "block";
+            }
         }
     }
 })
